@@ -1,5 +1,4 @@
-import { request, response, Router } from "express";
-import { Category } from "../model/Category";
+import { Router } from "express";
 import { CategoriesRespository } from "../respositories/CategoriesRespository";
 
 const categoriesRoutes = Router();
