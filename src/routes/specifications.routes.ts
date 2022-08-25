@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { SpecificationRepository } from "../Modules/Cars/repositories/SpecificationRepository";
+import { SpecificationRepository } from "../Modules/Cars/repositories/Implementations/SpecificationRepository";
 import { CreateSpecificationService } from "../Modules/Cars/services/CreateSpecificationService";
 
 
