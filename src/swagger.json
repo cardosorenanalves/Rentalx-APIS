@@ -1,0 +1,37 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "title": "Rentalx Documentation",
+        "description": "This is an API Rent",
+        "version": "1.0.0",
+        "contact": {
+            "email": "renancardoso0307@gmail.com"
+        }
+    },
+    "paths": {
+        "/categories":{
+            "post": {
+                "summary": "Create a category",
+                "description" : "Create a new category",
+                "requestBody": {
+                    "application/json": {
+                        "schema":{
+                            "type" : "object",
+                            "properties":{
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description" :{
+                                    "type": "string"
+                                }
+                            },
+                            "exemple":{
+                                "name": "Category name sample"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
