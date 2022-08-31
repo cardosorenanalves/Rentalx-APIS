@@ -11,9 +11,11 @@
     "paths": {
         "/categories":{
             "post": {
+                "tags": ["Categories"],
                 "summary": "Create a category",
                 "description" : "Create a new category",
                 "requestBody": {
+                    "content": {
                     "application/json": {
                         "schema":{
                             "type" : "object",
@@ -25,13 +27,53 @@
                                     "type": "string"
                                 }
                             },
-                            "exemple":{
-                                "name": "Category name sample"
+                            "example": {
+                                "name": "Category name sample",
+                                "description": "Category description sample"
+                            }
+                        }
+                    }
+                }
+                },
+                "responses":{
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500":{
+                        "description" : "Category already exists"
+                    }
+                }
+            },
+            "get":{
+                "tags": ["Categories"],
+                "summary": "List all categories",
+                "description": "List all categories",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json":{
+                                "schema":{
+                                    "type": "array",
+                                    "items":{
+                                        "type": "object",
+                                        "properties":{
+                                            "name":{
+                                                "type":"string"
+                                            },
+                                            "description":{
+                                                "type": "string"
+                                            }
+                                        }
+                                    }
+                                }
+
                             }
                         }
                     }
                 }
             }
+
         }
     }
 }
