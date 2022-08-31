@@ -25,9 +25,10 @@ class ImportCategoryUseCase {
         for await (const chunk of parseFile) {
           const [name, description] = chunk
       
+          
           categories.push({ name, description })
         }
-      
+        fs.promises.unlink(file.path)
         return categories
       }
 
